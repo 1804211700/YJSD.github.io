@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>励志</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/novel.css">
+    <link rel="stylesheet" href="css/hnf.css">
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 顶部栏  -->
+    <div id="top_box">
+        <div class="top">
+            <div class="topleft">一点时间一本书，遇见知识</div>
+            <ul class="topright">
+                <li><a href="login.html">登录/注册</a></li>
+
+                <li class="line">
+                <li><a href="#">消息</a></li>
+                </li>
+
+                <li class="line">
+                <li><a href="shopCar.html">购物车</a></li>
+                </li>
+
+                <li class="line">
+                <li><a href="#">我的订单</a></li>
+                </li>
+
+                <li class="line">
+                <li><a href="#">个人中心</a></li>
+                </li>
+
+                <li class="line">
+                <li><a href="#">客服</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 搜索框及logo -->
+    <div id="search_box">
+        <div class="search">
+            <div class="logo">
+                <img src="image/logo2.png">
+                <img src="image/logo3.png">
+            </div>
+            <!-- 搜索框 -->
+            <div class="search_key">
+                <form action="">
+                    <input class="search_put" type="text" placeholder="输入搜索内容">
+                    <input class="btn" type="button" value="搜索">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏部分 -->
+    <div id="nav_box">
+        <div class="nav_content">
+            <div class="bookclass">图书分类</div>
+            <ul class="nav">
+                <li><a href="Index.html" target="_blank" class="white">首页</a></li>
+                <li><a href="hotSell.html" target="_blank" class="white">热销</a></li>
+                <li><a href="newBook.html" class="white">新书专区</a></li>
+                <li><a href="discBook.html" class="white">特价专区</a></li>
+                <li><a href="recBook.html" class="white">推荐书单</a></li>
+                <!-- <li><a href="#" class="white">豆瓣高分</a></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- 图书 -->
+    <div id="index_box">
+        <div class="index">
+            <!-- 图书分类 -->
+            <div class="book_menu">
+                <ul class="list_group">
+                    <li class="list_item"><a href="novel.html">文学</a></li>
+                    <li class="list_item"><a href="edu.html">教育</a></li>
+                    <li class="list_item"><a href="eco_man.html">经管</a></li>
+                    <li class="list_item active"><a href="encour.html">励志</a></li>
+                    <li class="list_item"><a href="live.html">生活</a></li>
+                    <li class="list_item"><a href="social.html">社科</a></li>
+                    <li class="list_item"><a href="sci.html">科技</a></li>
+                </ul>
+            </div>
+            <!-- 书籍模块 -->
+            <div class="novelList">
+                <ul class="list">
+                    <script type="text/javascript">
+                        var images = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg",
+                            "09.jpg", "10.jpg"
+                        ];
+                        var names = ["你当像鸟飞往你的山", "老人与海", "肖申克的救赎", "钢铁是怎样炼成的", "少有人走的路", "天才基本法",
+                            "强风吹拂", "人性的弱点", "牧羊少年奇幻之旅", "飘"
+                        ];
+                        var authors = ["[美]塔拉·韦斯特弗", "海明威", "[美]斯蒂芬·金", "[苏]尼·奥斯特洛夫斯基", "[美]M·斯科特·派克", "长洱",
+                            "三浦紫苑", "戴尔·卡耐基", "[巴西]保罗·柯艾略", "[美]玛格丽特·米切尔"
+                        ];
+                        var prices = ["59.00", "8.20", "29.90", "20.00", "29.00", "78.00",
+                            "39.00", "32.00", "25.00", "40.00"
+                        ];
+                        for (var i = 0; i < images.length; i++) {
+                            var info = "<li><div class='imgList'><a href='details.html?img=encour/" +
+                                images[i] + "&tit=" + names[i] + "&aut=" + authors[i] + "&pri=" + prices[i] +
+                                "'><img src='image/encour/" + images[i] +
+                                "'></a></div><div class='info'><div class='name'><a href='details.html?img=encour/" +
+                                images[i] + "&tit=" + names[i] + "&aut=" + authors[i] + "&pri=" + prices[i] +
+                                "'>" + names[i] +
+                                "</a></div><div class='author'>" + authors[i] +
+                                "</a></div><div class='price'>￥" + prices[i] +
+                                "</div><div class='opButton'><a href='#' class='buy'>+加入购物车</a><a href='#' class='collect'>收藏</a></div></div></li>";
+                            document.write(info);
+                        }
+                    </script>
+                </ul>
+                <div class="page">
+                    <div class="paging">
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                    <li />
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">下一页</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部信息等 -->
+    <div class="screen_ft">
+        <div class="wrap">
+            <!-- 帮助 -->
+            <div class="yl_help">
+                <div class="unit">
+                    <div class="unit_wrap">
+                        <h4>消费者保障</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">7天无理由退货</a></li>
+                            <li><a href="#" target="_blank">24小时之内发货</a></li>
+                            <li><a href="#" target="_blank">服务中心</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="unit_wrap">
+                        <h4>新手上路</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">如何买书</a></li>
+                            <li><a href="#" target="_blank">如何支付</a></li>
+                            <li><a href="#" target="_blank">如何退款</a></li>
+                            <li><a href="#" target="_blank">配送说明</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="unit_wrap">
+                        <h4>支付方式</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">货到付款</a></li>
+                            <li><a href="#" target="_blank">在线支付</a></li>
+                            <li><a href="#" target="_blank">分期付款</a></li>
+                            <li><a href="#" target="_blank">积分支付</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="unit_wrap">
+                        <h4>个人账户</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">如何注册</a></li>
+                            <li><a href="#" target="_blank">普通会员与VIP</a></li>
+                            <li><a href="#" target="_blank">会员升级VIP</a></li>
+                            <li><a href="#" target="_blank">第三方登录</a></li>
+                            <li><a href="#" target="_blank">更多介绍</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <span>Copyright (C) 遇见书店 2004-2020, All Rights Reserved</span></br>
+                <span>© 遇见书店 ICP备2548154894号</span></br>
+                <span>中华人民共和国出版物经营许可证 | 营业执照</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

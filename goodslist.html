@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理—商品列表</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/goodslist.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="head">
+        <span>位置：</span>
+        <ul>
+            <li><a href="Index.html">首页 ></a></li>
+            <li><a href="backStage.html">后台管理 ></a></li>
+            <li><a href="goodslist.html">商品列表</a></li>
+        </ul>
+    </div>
+    <div class="info">
+        <div class="tool">
+            <ul class="toolbar">
+                <li><span><img src="images/t01.png" /></span><a href="addbooks.html">添加</a></li>
+                <li><span><img src="images/t02.png" /></span>修改</li>
+                <li><span><img src="images/t03.png" /></span>删除</li>
+                <li><span><img src="images/t04.png" /></span>统计</li>
+                <li><span><img src="images/t05.png" /></span>设置</li>
+            </ul>
+        </div>
+        <table class="tablelist">
+            <thead>
+                <tr>
+                    <th>
+                        <input name="checkAll" type="checkbox" id="checkAll" onchange="selectAll()" />全选/
+                        <input name="checkOther" type="checkbox" id="checkOther" onchange="selectOther()" />反选
+                    </th>
+                    <th>缩略图</th>
+                    <th>书籍名称</th>
+                    <th>书籍作者</th>
+                    <th>书籍类别</th>
+                    <th>数量(本）</th>
+                    <th>单价（元）</th>
+                    <th>是否审核</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input name="checkItem" type="checkbox" value="" /></td>
+                    <td><img src="image/01.jpg" /></td>
+                    <td>坡道上的家</td>
+                    <td>作者</td>
+                    <td>文学</td>
+                    <td>360</td>
+                    <td>¥58.00</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a>
+                        <a href="#" class="tablelink" onclick="del(this)"> 删除</a></td>
+                </tr>
+                <tr class="odd">
+                    <td><input name="checkItem" type="checkbox" value="" /></td>
+                    <td><img src="image/02.jpg" /></td>
+                    <td>世界杂货店</td>
+                    <td>作者</td>
+                    <td>小说</td>
+                    <td>139</td>
+                    <td>¥69.00</td>
+                    <td>未审核</td>
+                    <td><a href="#" class="tablelink">查看</a>
+                        <a href="#" class="tablelink" onclick="del(this)">删除</a></td>
+                </tr>
+                <tr>
+                    <td><input name="checkItem" type="checkbox" value="" /></td>
+                    <td><img src="image/03.jpg" /></td>
+                    <td>雾行者</td>
+                    <td>作者</td>
+                    <td>文学</td>
+                    <td>462</td>
+                    <td>¥60.00</td>
+                    <td>未审核</td>
+                    <td><a href="#" class="tablelink">查看</a>
+                        <a href="#" class="tablelink" onclick="del(this)">删除</a></td>
+                </tr>
+                <tr class="odd">
+                    <td><input name="checkItem" type="checkbox" value="" /></td>
+                    <td><img src="image/04.jpg" /></td>
+                    <td>云游</td>
+                    <td>作者</td>
+                    <td>文学</td>
+                    <td>349</td>
+                    <td>¥56.00</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a>
+                        <a href="#" class="tablelink" onclick="del(this)">删除</a></td>
+                </tr>
+                <tr>
+                    <td><input name="checkItem" type="checkbox" value="" /></td>
+                    <td><img src="image/05.jpg" /></td>
+                    <td>小行星掉在下午</td>
+                    <td>作者</td>
+                    <td>小说</td>
+                    <td>684</td>
+                    <td>¥70.00</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a>
+                        <a href="#" class="tablelink" onclick="del(this)">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagin">
+            <div class="message">共<i class="blue">1216</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+            <ul class="paginList">
+                <li class="paginItem"><a href="#"><span class="pagepre"></span></a></li>
+                <li class="paginItem"><a href="#">1</a></li>
+                <li class="paginItem current"><a href="#">2</a></li>
+                <li class="paginItem"><a href="#">3</a></li>
+                <li class="paginItem"><a href="#">4</a></li>
+                <li class="paginItem"><a href="#">5</a></li>
+                <li class="paginItem more"><a href="#">...</a></li>
+                <li class="paginItem"><a href="#">10</a></li>
+                <li class="paginItem"><a href="#"><span class="pagenxt"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    //全选或全不选
+    function selectAll() {
+        var items = document.getElementsByName("checkItem");
+        var checkAll = document.getElementById("checkAll");
+        var checkOther = document.getElementById("checkOther");
+        checkOther.checked = false;
+        for (var i = 0; i < items.length; i++) {
+            items[i].checked = checkAll.checked;
+        }
+    } //反选 
+    function selectOther() {
+        var items = document.getElementsByName("checkItem");
+        var checkAll = document.getElementById("checkAll");
+        var checkOther = document.getElementById("checkOther");
+        checkAll.checked = false;
+        for (var i = 0; i < items.length; i++) {
+            items[i].checked = !items[i].checked;
+        }
+    }
+
+    function del(i) {
+        var tr = i.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
+    }
+</script>
+
+</html>
